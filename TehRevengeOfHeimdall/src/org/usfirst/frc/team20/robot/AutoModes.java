@@ -77,6 +77,9 @@ public class AutoModes {
 		autonomousCommand = (Command) chooser.getSelected();
 		autonomousCommand.start();
 	}
+	public void autonomousPeriodic() {
+		Scheduler.getInstance().run();
+	}
 >>>>>>> origin/master
 
 }
