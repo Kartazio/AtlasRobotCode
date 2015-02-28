@@ -20,6 +20,7 @@ public class AutoModes {
 	
 	public void robotInit() {
 		chooser = new SendableChooser();
+		SmartDashboard.putData("Autonomous Selector", chooser);
 		chooser.addDefault("Autonomous 1/Main Autonomous", new Autonomous1());
 		chooser.addObject("Autonomous 2", new Autonomous2());
 		chooser.addObject("Autonomous 3", new Autonomous3());
@@ -30,7 +31,6 @@ public class AutoModes {
 		chooser.addObject("Autonomous 8", new Autonomous8());
 		chooser.addObject("Autonomous 9", new Autonomous9());
 		chooser.addObject("Autonomous 10", new Autonomous10());
-		SmartDashboard.putData("Autonomous Selector", chooser);
 		tal1.setFeedbackDevice(FeedbackDevice.QuadEncoder);
 		tal1.changeControlMode(CANTalon.ControlMode.Position);
 		tal1.setPosition(0);
